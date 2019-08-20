@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    android:background="@drawable/brickwall"
+    android:orientation="vertical"
+    tools:context="MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:background="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:paddingVertical="14dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Score : 0"
+        android:id="@+id/scoreLabel"/>
+
+    <Button
+        android:id="@+id/pauseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pausePushed"
+        android:text="PAUSE"
+        android:visibility="invisible"
+        android:layout_below = "@id/scoreLabel"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/quitGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="quitGame"
+
+        android:text="QUIT"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:background="@android:color/white"
+        android:layout_height="match_parent"
+        android:layout_width="260dp"
+        android:id="@+id/gameFrame"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_height="44dp"
+            android:layout_width="44dp"
+            android:id="@+id/box"
+            android:layout_gravity="bottom"
+            android:visibility="invisible"
+            android:src="@drawable/box_right"/>
+
+        <ImageView
+            android:layout_height="36dp"
+            android:layout_width="36dp"
+            android:id="@+id/black"
+            android:visibility="invisible"
+            android:src="@drawable/black"/>
+
+        <ImageView
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:id="@+id/orange"
+            android:visibility="invisible"
+            android:src="@drawable/orange"/>
+
+        <ImageView
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:id="@+id/pink"
+            android:visibility="invisible"
+            android:src="@drawable/pink"/>
+        <ImageView
+            android:layout_height="36dp"
+            android:layout_width="36dp"
+            android:id="@+id/yellow"
+            android:visibility="invisible"
+            android:src="@drawable/yellow"/>
+
+
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/startLayout"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:text="Recycle Catch"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="High Score : 300"
+            android:id="@+id/highScoreLabel"
+            android:layout_marginTop="80dp"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="START"
+            android:layout_marginTop="28dp"
+            android:onClick="startGame"/>
+        <Button
+            android:id="@+id/logout"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN/Up"
+            />
+        <Button
+            android:id="@+id/mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="28dp"
+            android:text="Modes"
+            android:onClick="setModeBtn"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
